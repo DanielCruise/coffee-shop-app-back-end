@@ -6,7 +6,7 @@ export class Coffee {
     type: string;
     @Prop({required:true})
     size: string;
-    @Prop({required:true})
+    @Prop()
     topping: string;
     @Prop({required: true})
     milk: string;
