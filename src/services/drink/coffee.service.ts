@@ -17,6 +17,7 @@ import {
     Coffee,
     CoffeeDocument
 } from '../../models/drink/coffee.schema';
+import {filter} from "rxjs";
 
 @Injectable()
 export class CoffeeService {
@@ -38,7 +39,7 @@ export class CoffeeService {
     }
 
     async findBySize(size: string) {
-
+        return this.coffeeModel.find({size: size})
     }
 
     async update(id: string, updateCoffeeDto: UpdateCoffeeDto): Promise < CoffeeDocument > {
