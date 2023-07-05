@@ -1,0 +1,100 @@
+{
+  "drink": {
+    "coffee": {
+      "showName": "Coffee",
+      "basePrice": 2,
+      "type": {
+        "hot": 0,
+        "cold": 0,
+        "blended": 1
+      },
+      "size": {
+        "s": 0,
+        "m": 0.5,
+        "l": 1,
+        "xl": 1.5
+      },
+      "whippedCreamTopping": {
+        "true": 0.5,
+        "false": 0
+      },
+      "chocolatePump": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0.5,
+        "4": 1,
+        "5": 1.5,
+        "6": 2
+      },
+      "constraint": [
+        [1, "type", "hot", 1, "size", "l", "A hot drink only has size S or M!"],
+        [1, "type", "hot", 1, "size", "xl", "A hot drink only has size S or M!"],
+        [-1, "type", "hot", -1, "chocolatePump", "0", "Only hot drink can be added chocolate sauce!"]
+      ]
+    },
+    "milkTea": {
+      "showName": "Milk Tea",
+      "basePrice": 2.25,
+      "type": {
+        "hot": 0,
+        "cold": 0,
+        "blended": 1
+      },
+      "size": {
+        "s": 0,
+        "m": 0.5,
+        "l": 1,
+        "xl": 1.5
+      },
+      "whippedCreamTopping": {
+        "true": 0.5,
+        "false": 0
+      },
+      "chocolatePump": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0.5,
+        "4": 1,
+        "5": 1.5,
+        "6": 2
+      },
+      "milk": {
+        "wholeMilk": 0,
+        "almondMilk": 0.5
+      },
+      "constraint": [
+        [1, "type", "hot", 1, "size", "l", "A hot drink only has size S or M!"],
+        [1, "type", "hot", 1, "size", "xl", "A hot drink only has size S or M!"],
+        [-1, "type", "hot", -1, "chocolatePump", "0", "Only hot drink can be added chocolate sauce!"]
+      ]
+    }
+  },
+  "food": {
+    "sandwich": {
+      "showName": "Sandwich",
+      "basePrice": 3,
+      "egg": {
+        "true": 1,
+        "false": 0
+      },
+      "turkey": {
+        "true": 1,
+        "false": 0
+      }
+    },
+    "bagel": {
+      "showName": "Bagel",
+      "basePrice": 3,
+      "butter": {
+        "true": 0.5,
+        "false": 0
+      },
+      "creamCheeseTopping": {
+        "true": 0.5,
+        "false": 0
+      }
+    }
+  }
+}
