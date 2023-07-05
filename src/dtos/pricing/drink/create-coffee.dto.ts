@@ -1,5 +1,5 @@
 import {
     Coffee
-} from "../../entities/drink/coffee.entity";
+} from "../../../entities/pricing/drink/coffee.entity";
 
 export class CreateCoffeeDto extends Coffee {}

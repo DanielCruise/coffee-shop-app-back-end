@@ -3,14 +3,14 @@ import {
 } from '@nestjs/common';
 import {
     CoffeeService
-} from '../../services/drink/coffee.service';
+} from '../../../services/pricing/drink/coffee.service';
 import {
     CoffeeController
-} from '../../controllers/drink/coffee.controller';
+} from '../../../controllers/pricing/drink/coffee.controller';
 import {
     Coffee,
     CoffeeSchema
-} from '../../models/drink/coffee.schema';
+} from '../../../models/pricing/drink/coffee.schema';
 import {
     MongooseModule
 } from '@nestjs/mongoose';

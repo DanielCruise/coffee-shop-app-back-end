@@ -1,5 +1,5 @@
 import {
     Breakfast
-} from "../../entities/breakfast/breakfast.entity";
+} from "../../../entities/pricing/breakfast/breakfast.entity";
 
 export class CreateBreakfastDto extends Breakfast {}

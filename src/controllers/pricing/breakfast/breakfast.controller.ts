@@ -9,13 +9,13 @@ import {
 } from '@nestjs/common';
 import {
     BreakfastService
-} from '../../services/breakfast/breakfast.service';
+} from '../../../services/pricing/breakfast/breakfast.service';
 import {
     CreateBreakfastDto
-} from '../../dtos/breakfast/create-breakfast.dto';
+} from '../../../dtos/pricing/breakfast/create-breakfast.dto';
 import {
     UpdateBreakfastDto
-} from '../../dtos/breakfast/update-breakfast.dto';
+} from '../../../dtos/pricing/breakfast/update-breakfast.dto';
 
 @Controller('breakfast')
 export class BreakfastController {

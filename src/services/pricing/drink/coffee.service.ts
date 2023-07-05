@@ -9,14 +9,14 @@ import {
 } from 'mongoose';
 import {
     CreateCoffeeDto
-} from '../../dtos/drink/create-coffee.dto';
+} from '../../../dtos/pricing/drink/create-coffee.dto';
 import {
     UpdateCoffeeDto
-} from '../../dtos/drink/update-coffee.dto';
+} from '../../../dtos/pricing/drink/update-coffee.dto';
 import {
     Coffee,
     CoffeeDocument
-} from '../../models/drink/coffee.schema';
+} from '../../../models/pricing/drink/coffee.schema';
 import {filter} from "rxjs";
 
 @Injectable()

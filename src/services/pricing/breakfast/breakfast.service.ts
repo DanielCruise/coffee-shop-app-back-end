@@ -9,14 +9,14 @@ import {
 } from 'mongoose';
 import {
     CreateBreakfastDto
-} from '../../dtos/breakfast/create-breakfast.dto';
+} from '../../../dtos/pricing/breakfast/create-breakfast.dto';
 import {
     UpdateBreakfastDto
-} from '../../dtos/breakfast/update-breakfast.dto';
+} from '../../../dtos/pricing/breakfast/update-breakfast.dto';
 import {
     Breakfast,
     BreakfastDocument
-} from '../../models/breakfast/breakfast.schema';
+} from '../../../models/pricing/breakfast/breakfast.schema';
 
 @Injectable()
 export class BreakfastService {

@@ -2,8 +2,8 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { MongooseModule } from '@nestjs/mongoose';
-import { CoffeeModule } from './modules/drink/coffee.module';
-import {BreakfastModule} from "./modules/breakfast/breakfast.module";
+import { CoffeeModule } from './modules/pricing/drink/coffee.module';
+import {BreakfastModule} from "./modules/pricing/breakfast/breakfast.module";
 
 @Module({
   imports: [

@@ -3,14 +3,14 @@ import {
 } from '@nestjs/common';
 import {
     BreakfastService
-} from '../../services/breakfast/breakfast.service';
+} from '../../../services/pricing/breakfast/breakfast.service';
 import {
     BreakfastController
-} from '../../controllers/breakfast/breakfast.controller';
+} from '../../../controllers/pricing/breakfast/breakfast.controller';
 import {
     Breakfast,
     BreakfastSchema
-} from '../../models/breakfast/breakfast.schema';
+} from '../../../models/pricing/breakfast/breakfast.schema';
 import {
     MongooseModule
 } from '@nestjs/mongoose';
