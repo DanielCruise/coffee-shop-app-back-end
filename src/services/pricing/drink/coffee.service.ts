@@ -36,15 +36,17 @@ export class CoffeeService {
             .exec();
     }
 
-    async findOne(id: string) {
+    async pricingByItem(id: string) {
         let price = 0;
         const coffee = await this.coffeeModel.findById(id);
         price += pricing.drink.coffee.basePrice;
-        price += pricing.drink.coffee.type[coffee.type.toLowerCase()];
-        price += pricing.drink.coffee.size[coffee.size.toLowerCase()];
-        // const itemJSON = JSON.stringify(item);
+        price += pricing.drink.coffee.type[coffee.type];
+        price += pricing.drink.coffee.size[coffee.size];
+        price += pricing.drink.topping.milk[coffee.milk];
+        price += pricing.drink.topping.chocolatePump[coffee.chocolateSauce];
+        if (coffee.whippedCreamTopping === true) price += pricing.drink.topping.whippedCreamTopping
+        price *= coffee.quantity
         return {item: coffee, price: price};
-
     }
 
     async findBySize(size: string) {

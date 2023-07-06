@@ -31,10 +31,15 @@ export class CoffeeController {
         return this.coffeeService.findAll();
     }
 
-    @Get(':id')
-    findOne(@Param('id') id: string) {
-        return this.coffeeService.findOne(id);
+    @Get('pricingByItem/:id')
+    pricingByItem(@Param('id') id: string) {
+        return this.coffeeService.pricingByItem(id);
     }
+
+    // @Get('pricingByCart/:orderId')
+    // pricingByCart(@Param('orderId') orderId: string) {
+    //     return this.coffeeService.pricingByCart(orderId);
+    // }
 
     @Get('findBySize/:size')
     findBySize(@Param('size') size: string) {

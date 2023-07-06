@@ -4,28 +4,15 @@
       "showName": "Coffee",
       "basePrice": 2,
       "type": {
-        "hot": 0,
-        "cold": 0,
-        "blended": 1
+        "Hot": 0,
+        "Cold": 0,
+        "Blended": 1
       },
       "size": {
-        "s": 0,
-        "m": 0.5,
-        "l": 1,
-        "xl": 1.5
-      },
-      "whippedCreamTopping": {
-        "true": 0.5,
-        "false": 0
-      },
-      "chocolatePump": {
-        "0": 0,
-        "1": 0,
-        "2": 0,
-        "3": 0.5,
-        "4": 1,
-        "5": 1.5,
-        "6": 2
+        "S": 0,
+        "M": 0.5,
+        "L": 1,
+        "XL": 1.5
       },
       "constraint": [
         [1, "type", "hot", 1, "size", "l", "A hot drink only has size S or M!"],
@@ -37,19 +24,28 @@
       "showName": "Milk Tea",
       "basePrice": 2.25,
       "type": {
-        "hot": 0,
-        "cold": 0,
-        "blended": 1
+        "Hot": 0,
+        "Cold": 0,
+        "Blended": 1
       },
       "size": {
-        "s": 0,
-        "m": 0.5,
-        "l": 1,
-        "xl": 1.5
+        "S": 0,
+        "M": 0.5,
+        "L": 1,
+        "XL": 1.5
       },
-      "whippedCreamTopping": {
-        "true": 0.5,
-        "false": 0
+
+      "constraint": [
+        [1, "type", "hot", 1, "size", "l", "A hot drink only has size S or M!"],
+        [1, "type", "hot", 1, "size", "xl", "A hot drink only has size S or M!"],
+        [-1, "type", "hot", -1, "chocolatePump", "0", "Only hot drink can be added chocolate sauce!"]
+      ]
+    },
+    "topping": {
+      "whippedCreamTopping": 0.5,
+      "milk": {
+        "wholeMilk": 0,
+        "almondMilk": 0.5
       },
       "chocolatePump": {
         "0": 0,
@@ -59,41 +55,24 @@
         "4": 1,
         "5": 1.5,
         "6": 2
-      },
-      "milk": {
-        "wholeMilk": 0,
-        "almondMilk": 0.5
-      },
-      "constraint": [
-        [1, "type", "hot", 1, "size", "l", "A hot drink only has size S or M!"],
-        [1, "type", "hot", 1, "size", "xl", "A hot drink only has size S or M!"],
-        [-1, "type", "hot", -1, "chocolatePump", "0", "Only hot drink can be added chocolate sauce!"]
-      ]
+      }
     }
   },
   "food": {
     "sandwich": {
       "showName": "Sandwich",
       "basePrice": 3,
-      "egg": {
-        "true": 1,
-        "false": 0
-      },
-      "turkey": {
-        "true": 1,
-        "false": 0
+      "topping": {
+        "egg": 1,
+        "turkey": 1
       }
     },
     "bagel": {
       "showName": "Bagel",
       "basePrice": 3,
-      "butter": {
-        "true": 0.5,
-        "false": 0
-      },
-      "creamCheeseTopping": {
-        "true": 0.5,
-        "false": 0
+      "topping": {
+        "butter": 0.5,
+        "creamCheeseTopping": 0.5
       }
     }
   }

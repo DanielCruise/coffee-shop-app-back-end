@@ -2,12 +2,12 @@ import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 export type CoffeeDocument = Coffee & Document;
 @Schema()
 export class Coffee {
-    @Prop({required:true})
+    @Prop({required: true})
     type: string;
-    @Prop({required:true})
+    @Prop({required: true})
     size: string;
-    @Prop()
-    topping: string;
+    @Prop({required: true})
+    whippedCreamTopping: boolean;
     @Prop({required: true})
     milk: string;
     @Prop({required: true})
